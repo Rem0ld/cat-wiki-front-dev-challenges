@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      borderRadius: {
+        '3xl': '42px',
+      },
     },
   },
 };
