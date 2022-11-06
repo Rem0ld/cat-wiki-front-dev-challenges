@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+
 import Footer from '../../layouts/Footer';
 import Navbar from '../../layouts/Navbar';
 

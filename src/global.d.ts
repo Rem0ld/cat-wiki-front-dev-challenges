@@ -1,0 +1,31 @@
+type TCat = {
+  id: string;
+  name: string;
+  adaptability: number;
+  affection_level: number;
+  alt_names: string;
+  child_friendly: number;
+  country_code: string;
+  country_codes: string;
+  description: string;
+  dog_friendly: number;
+  energy_level: number;
+  experimental: number;
+  grooming: number;
+  hairless: number;
+  health_issues: number;
+  hypoallergenic: number;
+  indoor: number;
+  intelligence: number;
+  life_span: string;
+  natural: number;
+  origin: string;
+  rare: number;
+  temperament: string;
+  stranger_friendly: number;
+  social_needs: number;
+  image: {
+    id: string;
+    url: string;
+  };
+};
