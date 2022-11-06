@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   html {
@@ -10,7 +10,65 @@
 }
 
 .search-block{
-  background-image: url("./assets/cat-wiki-master/HeroImagelg.png");
+  background-image: url("./assets/cat-wiki-master/HeroImagesm.png");
   background-size: cover;
-  
+}
+
+.logo-cat-1 {
+  width: 46px;
+
+}
+
+.logo-cat-2 {
+  display: none;
+}
+
+.icon-search > * {
+  width: 16px;
+  height: 16px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .search-block {
+  background-image: url("./assets/cat-wiki-master/HeroImagemd.png");
+
+  }
+
+  .logo-cat-1 {
+    width: 92px;
+
+  }
+
+  .logo-cat-2 {
+    display: block;
+    width: 46px;
+  }
+
+.icon-search > * {
+  width: 20px;
+  height: 20px;
+}
+}
+
+@media only screen and (min-width: 1024px) {
+  .search-block {
+  background-image: url("./assets/cat-wiki-master/HeroImagelg.png");
+
+  }
+
+  .logo-cat-1 {
+    width: 207px;
+
+  }
+
+  .logo-cat-2 {
+    display: block;
+    width: 80px;
+  }
+
+.icon-search > * {
+  width: 24px;
+  height: 24px;
+}
 }
