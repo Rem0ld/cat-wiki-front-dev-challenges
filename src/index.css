@@ -9,14 +9,13 @@
   }
 }
 
-.search-block{
-  background-image: url("./assets/cat-wiki-master/HeroImagesm.png");
+.search-block {
+  background-image: url('./assets/cat-wiki-master/HeroImagesm.png');
   background-size: cover;
 }
 
 .logo-cat-1 {
   width: 46px;
-
 }
 
 .logo-cat-2 {
@@ -28,16 +27,17 @@
   height: 16px;
 }
 
+.score {
+  @apply flex items-center justify-between xl:w-4/5;
+}
 
 @media only screen and (min-width: 768px) {
   .search-block {
-  background-image: url("./assets/cat-wiki-master/HeroImagemd.png");
-
+    background-image: url('./assets/cat-wiki-master/HeroImagemd.png');
   }
 
   .logo-cat-1 {
     width: 92px;
-
   }
 
   .logo-cat-2 {
@@ -45,21 +45,19 @@
     width: 46px;
   }
 
-.icon-search > * {
-  width: 20px;
-  height: 20px;
-}
+  .icon-search > * {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
   .search-block {
-  background-image: url("./assets/cat-wiki-master/HeroImagelg.png");
-
+    background-image: url('./assets/cat-wiki-master/HeroImagelg.png');
   }
 
   .logo-cat-1 {
     width: 207px;
-
   }
 
   .logo-cat-2 {
@@ -67,8 +65,8 @@
     width: 80px;
   }
 
-.icon-search > * {
-  width: 24px;
-  height: 24px;
-}
+  .icon-search > * {
+    width: 24px;
+    height: 24px;
+  }
 }

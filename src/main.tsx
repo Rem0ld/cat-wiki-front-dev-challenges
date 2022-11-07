@@ -5,9 +5,23 @@ import './index.css';
 import App from './App';
 import { store } from './store/store';
 
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLDivElement
 );
+
+const AppWrapper = () => {
+  return (
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </Provider>
+  );
+};
 
 if (process.env.NODE_ENV === 'development') {
   import('../mocks/browser')
@@ -15,16 +29,8 @@ if (process.env.NODE_ENV === 'development') {
       worker.start();
     })
     .then(() => {
-      root.render(
-        <Provider store={store}>
-          <App />
-        </Provider>
-      );
+      root.render(<AppWrapper />);
     });
 } else {
-  root.render(
-    <Provider store={store}>
-      <App />
-    </Provider>
-  );
+  root.render(<AppWrapper />);
 }
