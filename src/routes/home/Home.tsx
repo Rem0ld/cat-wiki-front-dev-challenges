@@ -5,8 +5,8 @@ import { url } from '../../api/constants';
 import image1 from '../../assets/cat-wiki-master/image 1.png';
 import image2 from '../../assets/cat-wiki-master/image 2.png';
 import image3 from '../../assets/cat-wiki-master/image 3.png';
-import logo2 from '../../assets/logo_cat_second_wiki.png';
-import logo from '../../assets/logo_cat_wiki.png';
+import logo2 from '../../assets/logo_cat_second_wiki.svg';
+import logo from '../../assets/logo_cat_wiki.svg';
 import { Input } from '../../components/Input';
 
 export const homeLoader = async ({ request }: { request: Request }) => {
@@ -21,13 +21,17 @@ export default function Home() {
   return (
     <>
       <div>
-        <div className="search-block flex h-[168px] items-center rounded-t-3xl px-7 py-5 md:h-56 md:px-14 lg:h-96 lg:px-28 xl:h-[538px]">
-          <div className="flex w-2/4 flex-col gap-3 xl:w-1/3 xl:gap-7">
-            <div className="flex items-baseline justify-start">
-              <img src={logo} alt="logo" className="logo-cat-1" />
+        <div className="search-block flex h-[168px] items-center rounded-t-3xl px-7 py-5 md:h-56 md:px-14 lg:h-96 lg:px-16 xl:h-[538px] xl:px-28">
+          <div className="flex w-2/4 flex-col gap-3 md:w-1/3 xl:w-2/5 xl:gap-7">
+            <div className="relative flex items-baseline justify-start gap-x-5">
+              <img
+                src={logo}
+                alt="logo"
+                className="logo-cat-1 relative top-2"
+              />
               <img src={logo2} alt="logo" className="logo-cat-2" />
             </div>
-            <h2 className="text-xs font-medium text-white lg:text-xl">
+            <h2 className="text-xs font-medium text-white lg:text-lg xl:text-2xl">
               Get to know more about your cat breed
             </h2>
             <Input />
@@ -43,10 +47,10 @@ export default function Home() {
             </p>
             <Link
               to="/most-searched"
-              className="hidden items-center gap-3 text-sm font-bold uppercase text-stone-500 lg:flex"
+              className="flex items-center gap-3 text-sm font-bold uppercase text-stone-500"
             >
               see more
-              <MdArrowRightAlt size={16} />
+              <MdArrowRightAlt size={24} />
             </Link>
           </div>
           <div className="mb-12 grid grid-cols-2 grid-rows-2 justify-items-center gap-x-3 gap-y-10 md:grid-cols-4 md:grid-rows-1">
@@ -62,7 +66,7 @@ export default function Home() {
                     src={cat.image.url}
                     alt="cat"
                   />
-                  <span className="absolute -bottom-6 text-xs font-semibold lg:-bottom-8 lg:text-lg">
+                  <span className="absolute top-full text-xs font-semibold lg:text-lg">
                     {cat.name}
                   </span>
                 </Link>
@@ -88,7 +92,7 @@ export default function Home() {
             className="flex items-center gap-3 text-xs font-bold uppercase text-stone-500 lg:text-lg"
           >
             read more
-            <MdArrowRightAlt size={16} />
+            <MdArrowRightAlt size={24} />
           </a>
         </div>
         <div className="image-block mt-16 mb-6 flex justify-center gap-4">

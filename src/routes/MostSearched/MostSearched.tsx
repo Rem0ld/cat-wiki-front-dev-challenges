@@ -18,7 +18,10 @@ export default function MostSearched() {
         {data?.length > 0 ? (
           data.map((cat: TCat, i) => {
             return (
-              <div key={cat.name} className="flex gap-10">
+              <div
+                key={cat.name}
+                className="flex flex-col items-center gap-10 md:flex-row md:items-start"
+              >
                 <img
                   src={cat.image.url}
                   className="h-[170px] w-[170px] min-w-[170px] rounded-xl object-cover"
