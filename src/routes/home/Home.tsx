@@ -7,7 +7,9 @@ import image2 from '../../assets/cat-wiki-master/image 2.png';
 import image3 from '../../assets/cat-wiki-master/image 3.png';
 import logo2 from '../../assets/logo_cat_second_wiki.svg';
 import logo from '../../assets/logo_cat_wiki.svg';
-import { Input } from '../../components/Input';
+import InputDesktop from '../../components/Input/InputDesktop';
+import InputMobile from '../../components/Input/InputMobile';
+import UseWindowDimensions from '../../hooks/UseWindowDimensions';
 
 export const homeLoader = async ({ request }: { request: Request }) => {
   return fetch(`${url}initial`, {
@@ -17,6 +19,7 @@ export const homeLoader = async ({ request }: { request: Request }) => {
 
 export default function Home() {
   const data = useLoaderData() as TCat[];
+  const [width] = UseWindowDimensions();
 
   return (
     <>
@@ -34,7 +37,7 @@ export default function Home() {
             <h2 className="text-xs font-medium text-white lg:text-lg xl:text-2xl">
               Get to know more about your cat breed
             </h2>
-            <Input />
+            {width > 425 ? <InputDesktop /> : <InputMobile />}
           </div>
         </div>
 
